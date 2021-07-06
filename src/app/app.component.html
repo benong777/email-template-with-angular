@@ -37,7 +37,7 @@
       <div class="notification-col col-12 col-sm-8 col-md-3 pt-4">
           <!-- Search bar -->
           <form action="" method="">
-              <div class="form-group">
+              <div class="form-group mb-5">
                   <div class="input-group">
                       <!-- Search icon -->
                       <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-search border-0 rounded-left" viewBox="0 0 16 16">
@@ -48,7 +48,16 @@
           </form>
 
           <!-- Notification cards -->
-          <div class="card notification-card border-0">
+          <div  class="card notification-card border-0"
+                *ngFor="let email of emails; let i=index">
+                <div class="card-body">
+                    <span class="notification-date">{{email.date}}</span>
+                    <div class="notification-title">{{email.subject}}</div>
+                    <p class="notification-content">{{email.content}}</p>
+                </div>
+          </div>
+
+          <!-- <div class="card notification-card border-0">
             <div class="card-body">
                 <span class="notification-date">3:20pm</span>
                 <div class="notification-title">All hands meeting</div>
@@ -68,8 +77,8 @@
                 <div class="notification-title">Appointment reminder</div>
                 <p class="notification-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolores amet incidunt excepturi, tempore placeat. Impedit sit ullam dolorum repellendus.</p>
             </div>
+        </div> -->
         </div>
-    </div>
 
     <div class="col-12 col-sm-12 col-md-7 pt-4">
       <div class="container">
