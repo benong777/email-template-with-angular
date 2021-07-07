@@ -40,7 +40,12 @@ export class AppComponent {
     if (this.emails.length > 1) {
       this.emails.splice(0, 1);
     }
-    
+  }
+  onEmailSelect(index: number) {
+    console.log("Email selected: " + index);
+    this.emailDate = this.emails[index].date;
+    this.emailSubject = this.emails[index].subject;
+    this.emailContent = this.emails[index].content;
   }
 
 }
