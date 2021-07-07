@@ -41,6 +41,7 @@ export class AppComponent {
     }
   ];
 
+  inboxTotal = this.emails.length;
 
   onDeleteEmail() {
     // Max index is the length of the emails
@@ -48,20 +49,25 @@ export class AppComponent {
 
     // When the selected email is at index 0
     if (this.currEmailIndex === 0) {
-      // If max === 0, there's no more emails
-      if (max === 0) this.emailsEmpty = true;
-      else {
+      if (max === 0) {
+        // If max === 0, there are no emails
+        this.emailsEmpty = true;
+      }
         // Delete email and keep index at 0
         this.emails.splice(this.currEmailIndex, 1);
         this.currEmailIndex = 0;
-      }
     }
 
     // If selected email index is > 0, delete and decrement the index
-    else if (this.currEmailIndex > 0) {
+    else if (this.currEmailIndex >= 0) {
       this.emails.splice(this.currEmailIndex, 1);
       this.currEmailIndex -= 1;
     }
+
+    // Update inbox total
+    console.log(this.inboxTotal = this.emails.length);
+    console.log(this.emails);
+    this.inboxTotal = this.emails.length;
   }
 
   // Update selected email card data
