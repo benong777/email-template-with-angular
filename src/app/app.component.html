@@ -71,7 +71,7 @@
 
         <!-- Email Subject -->
         <div    class="email-subject h4 mt-5 pt-1"
-                *ngIf="!emailsEmpty">{{emailSubject}}
+                *ngIf="!emailsEmpty">{{emails[currEmailIndex].subject}}
             <span>
                 <!-- Horizontal 3-dot icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots float-right" viewBox="0 0 16 16">
@@ -94,7 +94,7 @@
         <!-- Email content -->
         <div class="row email-content mt-5">
             <div class="col"
-                *ngIf="!emailsEmpty">{{emailContent}}
+                *ngIf="!emailsEmpty">{{emails[currEmailIndex].content}}
             </div>
         </div>
 
