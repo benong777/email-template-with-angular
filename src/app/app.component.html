@@ -51,11 +51,12 @@
           <div  class="card notification-card border-0"
                 *ngFor="let email of emails; let i=index">
                 <div class="card-body"
-                    *ngIf="!emailsEmpty"
-                    (click)="onEmailSelect(i)">
-                    <span class="notification-date">{{email.date}}</span>
+                *ngIf="!emailsEmpty"
+                (click)="onEmailSelect(i)">
+                    <app-list-item [currEmail]="email"></app-list-item>
+                    <!-- <span class="notification-date">{{email.date}}</span>
                     <div class="notification-title">{{email.subject}}</div>
-                    <p class="notification-content">{{email.content}}</p>
+                    <p class="notification-content">{{email.content}}</p> -->
                 </div>
           </div>
     </div>
