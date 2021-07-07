@@ -1,0 +1,7 @@
+#search-icon {
+    padding: 4px;
+    background-color: white;
+}
+.search-box:focus {
+    box-shadow: none;
+}

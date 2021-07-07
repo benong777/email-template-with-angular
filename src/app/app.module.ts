@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { CommonModule } from '@angular/common';
 import { ListItemComponent } from './list-item/list-item.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListItemComponent
+    ListItemComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

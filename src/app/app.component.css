@@ -79,9 +79,9 @@ textarea {
 .row {
     height: 100%;
 }
-.search-box:focus {
+/* .search-box:focus {
     box-shadow: none;
-}
+} */
 .welcome-msg {
     font-size: .9rem;
     margin-top: 10px;
@@ -103,7 +103,8 @@ textarea {
 #btn-compose:focus {
    box-shadow: none;
 }
-#search-icon {
+/* #search-icon {
     padding: 4px;
     background-color: white;
-}
+} */
+
