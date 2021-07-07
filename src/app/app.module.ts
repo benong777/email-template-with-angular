@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { ListItemComponent } from './list-item/list-item.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { EmailContentComponent } from './email-content/email-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListItemComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    EmailContentComponent
   ],
   imports: [
     BrowserModule,

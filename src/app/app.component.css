@@ -1,13 +1,13 @@
 /* Tags */
-textarea {
+/* textarea {
     resize: none;
-}
+} */
 
 /* Classes */
 .screen {
     height: 100%;
 }
-.bi-reply-fill{
+/* .bi-reply-fill{
     padding: 1px 1px;
     margin-left: 5px;
     margin-right: 5px;
@@ -21,14 +21,14 @@ textarea {
     padding: 2px 2px;
     margin-left: 5px;
     margin-right: 5px;
-}
+} */
 .card {
     margin-top: 0.7rem;
 }
 .card-body {
     padding-bottom: .5rem;
 }
-.email-address {
+/* .email-address {
     font-size: 1.2rem;
 }
 .email-content {
@@ -36,7 +36,7 @@ textarea {
 }
 .email-reply-box:focus {
     box-shadow: none;
-}
+} */
 .menu-col {
     color: white;
     background-color: rgb(51, 50, 50);
@@ -72,10 +72,10 @@ textarea {
     margin-top: 30px;
     margin-bottom: 40px;
 }
-.reply-box-container {
+/* .reply-box-container {
     padding-bottom: 34px;
     margin-top: 50px;
-}
+} */
 .row {
     height: 100%;
 }
@@ -89,9 +89,9 @@ textarea {
 }
 
 /* IDs */
-#attachment-icon {
+/* #attachment-icon {
     padding: 4px;
-}
+} */
 #btn-compose {
     font-size: 1.5em;
     background-color: orange;

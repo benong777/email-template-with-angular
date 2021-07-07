@@ -76,6 +76,7 @@ export class AppComponent {
     this.emailDate = this.emails[index].date;
     this.emailSubject = this.emails[index].subject;
     this.emailContent = this.emails[index].content;
+    this.emailTo = this.emails[index].to;
+    this.emailFrom = this.emails[index].from;
   }
-
 }

@@ -1,0 +1,34 @@
+textarea {
+    resize: none;
+}
+.bi-reply-fill{
+    padding: 1px 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.bi-three-dots {
+    padding: 1px 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.bi-trash-fill {
+    padding: 2px 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.email-address {
+    font-size: 1.2rem;
+}
+.email-content {
+    font-size: 1.30rem;
+}
+.email-reply-box:focus {
+    box-shadow: none;
+}
+.reply-box-container {
+    padding-bottom: 34px;
+    margin-top: 50px;
+}
+#attachment-icon {
+    padding: 4px;
+}
