@@ -63,7 +63,8 @@
       <div class="container">
         <!-- Email header -->
         <div class="row">
-            <div class="col email-address">To: support@gmail.com<br>From: ben@webapp.com<br>
+            <div class="col email-address"
+                *ngIf="!emailsEmpty">To: support@gmail.com<br>From: ben@webapp.com<br>
             </div>
         </div>
 
@@ -86,6 +87,8 @@
                 </svg>
             </span>
         </div>
+        <div    class="email-subject h4 mt-5 pt-1"
+                *ngIf="emailsEmpty">No emails</div>
 
         <!-- Email content -->
         <div class="row email-content mt-5">

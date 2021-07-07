@@ -33,12 +33,14 @@ export class AppComponent {
   ];
 
   onDeleteEmail() {
-    if (this.emails.length >= 1) {
-      this.emails.splice(0, 1);
-    }
-    else {
+    // Set emailsEmpty flag before deleting
+    if (this.emails.length === 1) {
       this.emailsEmpty = true;
     }
+    if (this.emails.length > 1) {
+      this.emails.splice(0, 1);
+    }
+    
   }
 
 }
