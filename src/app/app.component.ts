@@ -12,6 +12,8 @@ export class AppComponent {
   emailSubject = '';
   emailContent = '';
 
+  emailsEmpty = false;
+
   emails = [
     {
       date: '3:20pm',
@@ -29,5 +31,14 @@ export class AppComponent {
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolores amet incidunt excepturi, tempore placeat. Impedit sit ullam dolorum repellendus.'
     }
   ];
+
+  onDeleteEmail() {
+    if (this.emails.length >= 1) {
+      this.emails.splice(0, 1);
+    }
+    else {
+      this.emailsEmpty = true;
+    }
+  }
 
 }
