@@ -65,7 +65,7 @@
         <!-- Email header -->
         <div class="row">
             <div class="col email-address"
-                *ngIf="!emailsEmpty">To: support@gmail.com<br>From: ben@webapp.com<br>
+                *ngIf="!emailsEmpty">To: {{emails[currEmailIndex].to}}<br>From: {{emails[currEmailIndex].from}}<br>
             </div>
         </div>
 

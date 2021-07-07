@@ -11,6 +11,8 @@ export class AppComponent {
   emailDate = '';
   emailSubject = '';
   emailContent = '';
+  emailTo = '';
+  emailFrom = '';
 
   currEmailIndex = 0;
   emailsEmpty = false;
@@ -19,19 +21,26 @@ export class AppComponent {
     {
       date: '3:20pm',
       subject: 'All hands meeting',
-      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat harum explicabo, perferendis vitae alias?'
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat harum explicabo, perferendis vitae alias?',
+      to: 'alex@gmail.com',
+      from: 'beth@gmail.com'
     },
     {
       date: 'Mar 2, 2021',
       subject: 'Linkedin daily feed',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolores amet incidunt excepturi, tempore placeat. Impedit sit ullam dolorum repellendus.'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolores amet incidunt excepturi, tempore placeat. Impedit sit ullam dolorum repellendus.',
+      to: 'chris@gmail.com',
+      from: 'dave@gmail.com'
     },
     {
       date: 'Mar 3, 2021',
       subject: 'Appointment reminder',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolores amet incidunt excepturi, tempore placeat. Impedit sit ullam dolorum repellendus.'
+      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dolores amet incidunt excepturi, tempore placeat. Impedit sit ullam dolorum repellendus.',
+      to: 'emily@gmail.com',
+      from: 'felicia@gmail.com'
     }
   ];
+
 
   onDeleteEmail() {
     // Max index is the length of the emails
@@ -49,46 +58,14 @@ export class AppComponent {
     }
 
     // If selected email index is > 0, delete and decrement the index
-    if (this.currEmailIndex > 0) {
+    else if (this.currEmailIndex > 0) {
       this.emails.splice(this.currEmailIndex, 1);
       this.currEmailIndex -= 1;
     }
-
-    // //Set emailsEmpty flag before deleting
-    // if (this.emails.length === 0) {
-    //   this.emailsEmpty = true;
-    // }
-
-    // else if (this.emails.length === 1) {
-    //   this.emails.splice(this.currEmailIndex, 1);
-    //   this.emailsEmpty = true;
-    // }
-    // else {  // this.emails.length > 1
-    //   this.emails.splice(this.currEmailIndex, 1);
-    //   if (this.currEmailIndex === 1) {
-    //     this.currEmailIndex = 0;
-    //   }
-    //   else {
-    //     this.currEmailIndex += 1;
-    //     if (this.currEmailIndex > (this.emails.length-1)) {
-    //       this.currEmailIndex = this.emails.length -1;
-    //     }
-    //   }
-    // }
-    console.log(this.currEmailIndex);
-
-    // get length
-    // max = length - 1
-    // min = 0
-
-    // if num == 0
-          // if max == 0; empty
-          // else splice, num = 0;
-    // if num > 0
-          // if num <= max, splice, num -= 1;
   }
+
+  // Update selected email card data
   onEmailSelect(index: number) {
-    console.log("Email selected: " + index);
     this.currEmailIndex = index;
     this.emailDate = this.emails[index].date;
     this.emailSubject = this.emails[index].subject;
