@@ -16,6 +16,7 @@ export class AppComponent {
 
   currEmailIndex = 0;
   emailsEmpty = false;
+  trashTotal = 0;
 
   emails = [
     {
@@ -64,10 +65,9 @@ export class AppComponent {
       this.currEmailIndex -= 1;
     }
 
-    // Update inbox total
-    console.log(this.inboxTotal = this.emails.length);
-    console.log(this.emails);
+    // Update inbox/trash total
     this.inboxTotal = this.emails.length;
+    this.trashTotal += 1;
   }
 
   // Update selected email card data
