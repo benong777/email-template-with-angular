@@ -44,7 +44,7 @@ export class AppComponent {
 
   inboxTotal = this.emails.length;
 
-  onDeleteEmail() {
+  deleteEmail() {
     // Max index is the length of the emails
     let max = this.emails.length -1;
 

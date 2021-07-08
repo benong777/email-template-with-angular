@@ -63,7 +63,9 @@
 
     <!-- Email content section -->
     <div class="col-12 col-sm-12 col-md-7 pt-4">
-        <app-email-content [currEmail]="emails[currEmailIndex]"></app-email-content>
+        <app-email-content  [emailsEmptyFlag]="emailsEmpty"
+                            [currEmail]="emails[currEmailIndex]"
+                            (deleteEmailEvent)="deleteEmail()"></app-email-content>
       <!-- <div class="container">
         <div class="row">
             <div class="col email-address"
