@@ -20,8 +20,8 @@
             </svg>
         </span>
     </div>
-    <div    class="email-subject h4 mt-5 pt-1"
-            *ngIf="emailsEmptyFlag">No emails</div>
+    <div    class="email-subject h4 mt-5 pt-1 d-flex justify-content-center"
+            *ngIf="emailsEmptyFlag">Inbox empty</div>
 
     <div class="row email-content mt-5">
         <div class="col"
@@ -30,7 +30,8 @@
     </div>
 
     <form action="" method="">
-        <div class="form-group reply-box-container border rounded">
+        <div class="form-group reply-box-container border rounded"
+             *ngIf="!emailsEmptyFlag">
             <textarea class="form-control email-reply-box border-0" rows="6"></textarea>
             <button class="email-reply-btn float-right btn btn-outline-warning mr-2 mt-1">Reply</button>
             <svg id="attachment-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="float-left bi bi-paperclip mt-1" viewBox="0 0 16 16">
